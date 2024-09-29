@@ -1,31 +1,47 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.11.35303.130
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TASK 2", "TASK 2\TASK 2.vcxproj", "{4D1421E2-842D-4B48-B00C-9AD289A57E25}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4D1421E2-842D-4B48-B00C-9AD289A57E25}.Debug|x64.ActiveCfg = Debug|x64
-		{4D1421E2-842D-4B48-B00C-9AD289A57E25}.Debug|x64.Build.0 = Debug|x64
-		{4D1421E2-842D-4B48-B00C-9AD289A57E25}.Debug|x86.ActiveCfg = Debug|Win32
-		{4D1421E2-842D-4B48-B00C-9AD289A57E25}.Debug|x86.Build.0 = Debug|Win32
-		{4D1421E2-842D-4B48-B00C-9AD289A57E25}.Release|x64.ActiveCfg = Release|x64
-		{4D1421E2-842D-4B48-B00C-9AD289A57E25}.Release|x64.Build.0 = Release|x64
-		{4D1421E2-842D-4B48-B00C-9AD289A57E25}.Release|x86.ActiveCfg = Release|Win32
-		{4D1421E2-842D-4B48-B00C-9AD289A57E25}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {37CF8163-34E0-4693-A919-E5A9F865514F}
-	EndGlobalSection
-EndGlobal
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(0, ".1251");
+
+    int num;
+    cout << "Введiть цiле число: ";
+    cin >> num;
+    int remainder = num % 7;
+    cout << "Залишок вiд дiлення числа " << num << " на 7: " << remainder << endl;
+
+    int num1, num2;
+    cout << "Введiть перше цiле число: ";
+    cin >> num1;
+    cout << "Введiть друге цiле число: ";
+    cin >> num2;
+
+    if (num2 != 0) {
+        if (num1 % num2 == 0) {
+            cout << num1 << " дiлиться на " << num2 << " без залишку." << endl;
+        }
+        else {
+            cout << num1 << " не дiлиться на " << num2 << " без залишку." << endl;
+        }
+    }
+    else {
+        cout << "Дiлення на нуль неможливе." << endl;
+    }
+
+    if (num1 % 2 == 0) {
+        cout << "Перше число (" << num1 << ") є парним." << endl;
+    }
+    else {
+        cout << "Перше число (" << num1 << ") не є парним." << endl;
+    }
+
+    if (num2 % 2 == 0) {
+        cout << "Друге число (" << num2 << ") є парним." << endl;
+    }
+    else {
+        cout << "Друге число (" << num2 << ") не є парним." << endl;
+    }
+
+    return 0;
+}
+
